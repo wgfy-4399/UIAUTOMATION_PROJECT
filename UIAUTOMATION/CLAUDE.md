@@ -390,3 +390,103 @@ ls -la data/page_xml/android/main/
 python utils/migrate_locators.py
 ```
 该脚本会自动转换 `config/locators/` 下所有 YAML 文件，并创建 `.backup` 备份。
+
+## 双 CC 协作工作流程
+
+双 CC 模式是一种并行工作流程，CC1 负责页面元素抓取，CC2 负责测试用例编写，通过 MEMORY.md 文件同步进度。
+
+### 协作状态值
+
+| 状态 | 说明 |
+|------|------|
+| `IDLE` | 空闲状态，无活跃任务 |
+| `CC1_WORKING` | CC1 正在抓取元素 |
+| `CC1_COMPLETED` | CC1 已完成，CC2 可开始 |
+| `CC2_WORKING` | CC2 正在编写测试 |
+| `COMPLETED` | 双 CC 协作完成 |
+
+### 终端 1：CC1 工作流（元素抓取）
+
+```bash
+# 1. 进入项目目录
+cd /Users/zhuanzmima0000/UIautomation_project/UIAUTOMATION
+
+# 2. 启动 CC1 工作流（自动创建 worktree 和分支）
+python scripts/sync/cc1_start.py --page profile
+
+# 3. 进入 worktree
+cd .claude/worktrees/cc1
+
+# 4. 启动 Claude Code
+claude
+
+# 5. 参考 scripts/sync/CC1_PROMPT.md 中的提示词执行任务
+```
+
+### 终端 2：CC2 工作流（测试开发）
+
+```bash
+# 1. 检查 CC1 状态
+python scripts/sync/check_status.py
+
+# 2. 当状态变为 CC1_COMPLETED 后，启动 CC2
+python scripts/sync/cc2_start.py --page profile
+
+# 3. 进入 worktree
+cd .claude/worktrees/cc2
+
+# 4. 启动 Claude Code
+claude
+
+# 5. 参考 scripts/sync/CC2_PROMPT.md 中的提示词执行任务
+```
+
+### 辅助脚本
+
+| 脚本 | 功能 |
+|------|------|
+| `scripts/sync/check_status.py` | 解析 MEMORY.md 协作状态 |
+| `scripts/sync/cc1_start.py` | CC1 工作流入口脚本 |
+| `scripts/sync/cc2_start.py` | CC2 工作流入口脚本 |
+| `scripts/validate/validate_locators.py` | YAML 定位符验证 |
+| `scripts/sync/CC1_PROMPT.md` | CC1 提示词模板 |
+| `scripts/sync/CC2_PROMPT.md` | CC2 提示词模板 |
+
+### CC1 工作流程
+
+1. **启动工作流**: `python scripts/sync/cc1_start.py --page <page_name>`
+2. **采集 XML**: `python scripts/capture_xml.py --app main --platform ios`
+3. **创建定位符配置**: 编辑 `config/locators/<page_name>_locators.yaml`
+4. **验证配置**: `python scripts/validate/validate_locators.py`
+5. **完成工作流**: `python scripts/sync/cc1_start.py --complete --page <page_name>`
+
+### CC2 工作流程
+
+1. **等待 CC1 完成**: 使用 `check_status.py` 检查状态
+2. **启动工作流**: `python scripts/sync/cc2_start.py --page <page_name>`
+3. **创建 Page Object**: 编辑 `page/pages/<page_name>_page.py`
+4. **创建测试用例**: 编辑 `case/test_<page_name>.py`
+5. **运行测试**: `pytest case/test_<page_name>.py --app main`
+6. **完成工作流**: `python scripts/sync/cc2_start.py --complete --page <page_name>`
+
+### 协作时序图
+
+```
+时间轴 →
+
+终端1 (CC1): [启动脚本] → [创建worktree] → [抓取元素] → [编写Locator] → [完成]
+                                                           ↓
+                                                     MEMORY.md 更新
+                                                           ↓
+终端2 (CC2):                                          [检测CC1完成] → [创建worktree] → [编写测试]
+```
+
+### 关键文件路径
+
+| 组件 | 路径 | 用途 |
+|------|------|------|
+| XMLCaptureUtils | `utils/xml_capture_utils.py` | XML 抓取 |
+| load_locators | `utils/locator_utils.py` | 加载定位符 |
+| BasePage | `page/base_page.py` | Page Object 基类 |
+| init_driver | `conftest.py` | pytest fixture |
+| MEMORY.md | `MEMORY.md` | 协作状态同步文件 |
