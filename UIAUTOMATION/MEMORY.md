@@ -1,5 +1,20 @@
 # 双 CC 协作进度同步
 
+## 协作状态
+
+| 当前状态 | 最后更新 | 活跃页面 |
+|----------|----------|----------|
+| IDLE | - | - |
+
+**状态值说明:**
+- `IDLE` - 空闲状态，无活跃任务
+- `CC1_WORKING` - CC1 正在抓取元素
+- `CC1_COMPLETED` - CC1 已完成，CC2 可开始
+- `CC2_WORKING` - CC2 正在编写测试
+- `COMPLETED` - 双 CC 协作完成
+
+---
+
 ## CC1（元素抓取）进度
 
 ### 已完成
@@ -8,20 +23,28 @@
 - [x] home 页面 - 已抓取 (2026-03-26)
 
 ### 待抓取
-- [ ] shelf 页面 - 书架（WebDriverAgent 连接问题阻塞中）
-- [ ] reader 页面 - 阅读器
+- [ ] reader 页面 - 阅读器（⚠️ 阅读器使用自定义渲染，Accessibility 无法访问）
 - [ ] profile 页面 - 个人中心
+
+### 已有定位符配置（无需重新抓取）
+- [x] reader_locators.yaml - 已存在目录、下一章按钮等定位符
 
 ## CC2（用例编写）进度
 
-### 可开始编写
-- [ ] rewards 页面 - TaskCenterPage 已有基础实现
-- [ ] checkin_popup 页面
+### 已完成
+- [x] rewards 页面 - 增强测试用例 (2026-03-26)
+  - 新增签到弹窗关闭测试
+  - 新增每日签到流程测试
+  - 新增金币余额验证测试
+- [x] shelf 页面 - 增强 ShelfPage + 新建测试用例 (2026-03-26)
+  - ShelfPage 新增 get_book_count()、get_book_titles() 方法
+  - 新建 test_shelf.py（书架加载、书籍数量、打开书籍测试）
+- [x] home 页面 - 增强测试用例 (2026-03-26)
+  - 新增搜索入口点击测试
 
-### 等待中
-- [ ] home 页面 - 等待 CC1 完成抓取
-- [ ] shelf 页面 - 等待 CC1 完成抓取
-- [ ] reader 页面 - 等待 CC1 完成抓取
+### 等待 CC1 完成抓取
+- [ ] reader 页面
+- [ ] profile 页面
 
 ## CC1 输出文件清单
 
