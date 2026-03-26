@@ -1,0 +1,88 @@
+# data/test_data/landing_page_data.yaml 优化版
+landing_page:
+  # 主包（匹配页面的literie APP）
+  main:
+    android:
+      # 带动态参数的URL模板（保留你的真实链接）
+      url_template: "https://fqwebsite.lin47.com/share/middle/ofgublg3mpues0glbq4qoirx?campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}&campaign={{campaign.name}}&adgroup={{adset.name}}"
+      # 测试环境真实参数
+      test_params:
+        campaign.id: "123456"
+        adset.id: "789012"
+        ad.id: "345678"
+        campaign.name: "main_app_android_test"
+        adset.name: "main_landing_page_ad"
+      # 唤起按钮定位符（匹配页面的Read More按钮）
+      call_btn_locators:  # 兼容静态/悬浮两个按钮
+        static_btn:  # 静态按钮（页面下方）
+          by: "xpath"
+          value: "//div[contains(@class, 'jump-btn') and contains(text(), 'Read More')]"
+        float_btn:  # 滚动后悬浮按钮
+          by: "xpath"
+          value: "//div[contains(@class, 'jump-btn-float') and contains(text(), 'Read More')]"
+      # 页面核心标识（从HTML中提取）
+      target_package: "com.literie.main"  # APP包名（需替换为真实值）
+      deep_link: "literie://literie_main"  # 页面中的deep_link
+      link_id: "100844"  # 页面中的LANDING_PAGE_INFO_CACHE_KEY后缀
+    ios:
+      url_template: "https://fqwebsite.lin47.com/share/middle/ofgublg3mpues0glbq4qoirx?campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}&campaign={{campaign.name}}&adgroup={{adset.name}}"
+      test_params:
+        campaign.id: "123457"
+        adset.id: "789013"
+        ad.id: "345679"
+        campaign.name: "main_app_ios_test"
+        adset.name: "main_landing_page_ios_ad"
+      call_btn_locators:
+        static_btn:
+          by: "xpath"
+          value: "//div[contains(@class, 'jump-btn') and contains(text(), 'Read More')]"
+        float_btn:
+          by: "xpath"
+          value: "//div[contains(@class, 'jump-btn-float') and contains(text(), 'Read More')]"
+      target_bundle_id: "com.literie.main"
+      deep_link: "literie://literie_main"
+      link_id: "100844"
+  # 马甲包1（按需复制调整）
+  vest1:
+    android:
+      url_template: "https://fqwebsite.lin47.com/share/middle/ofgublg3mpues0glbq4qoirx?campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}&campaign={{campaign.name}}&adgroup={{adset.name}}"
+      test_params:
+        campaign.id: "123458"
+        adset.id: "789014"
+        ad.id: "345680"
+        campaign.name: "vest1_app_android_test"
+        adset.name: "vest1_landing_page_ad"
+      call_btn_locators:
+        static_btn:
+          by: "xpath"
+          value: "//div[contains(@class, 'jump-btn') and contains(text(), 'Read More')]"
+        float_btn:
+          by: "xpath"
+          value: "//div[contains(@class, 'jump-btn-float') and contains(text(), 'Read More')]"
+      target_package: "com.literie.vest1"
+      deep_link: "literie://literie_vest1"
+      link_id: "100845"
+    ios:
+      url_template: "https://fqwebsite.lin47.com/share/middle/ofgublg3mpues0glbq4qoirx?campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}&campaign={{campaign.name}}&adgroup={{adset.name}}"
+      test_params:
+        campaign.id: "123459"
+        adset.id: "789015"
+        ad.id: "345681"
+        campaign.name: "vest1_app_ios_test"
+        adset.name: "vest1_landing_page_ios_ad"
+      call_btn_locators:
+        static_btn:
+          by: "xpath"
+          value: "//div[contains(@class, 'jump-btn') and contains(text(), 'Read More')]"
+        float_btn:
+          by: "xpath"
+          value: "//div[contains(@class, 'jump-btn-float') and contains(text(), 'Read More')]"
+      target_bundle_id: "com.literie.vest1"
+      deep_link: "literie://literie_vest1"
+      link_id: "100845"
+
+# 通用配置
+timeout: 15  # 页面加载超时（页面有较多脚本，延长至15秒）
+call_wait_time: 8  # 点击后等待APP启动（页面跳转有3秒延迟，延长至8秒）
+scroll_to_bottom: true  # 是否滚动到页面底部（触发悬浮按钮/统计事件）
+param_replace_pattern: "{{(.*?)}}"

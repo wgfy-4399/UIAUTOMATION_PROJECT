@@ -1,0 +1,12 @@
+{
+  "page_name": "rewards",
+  "app_name": "main",
+  "platform": "ios",
+  "timestamp": "20260324_135917",
+  "description": "个人中心页面",
+  "xml_file": "rewards_20260324_135917.xml",
+  "window_size": {
+    "width": 414,
+    "height": 736
+  }
+}

@@ -1,0 +1,54 @@
+chapter_list_button:
+  android:
+    main:
+      type: css
+      value: com.wangwen.main:id/tvContents
+    vest1:
+      type: css
+      value: com.kw.literie:id/tvContents
+    vest2:
+      type: css
+      value: com.kw.literie.vest2:id/tvContents
+    vest3:
+      type: css
+      value: com.kw.literie.vest3:id/tvContents
+  ios:
+    main:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='目录']
+    vest1:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='目录']
+    vest2:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='目录']
+    vest3:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='目录']
+next_chapter_button:
+  android:
+    main:
+      type: css
+      value: com.wangwen.main:id/ivNext
+    vest1:
+      type: css
+      value: com.kw.literie:id/ivNext
+    vest2:
+      type: css
+      value: com.kw.literie.vest2:id/ivNext
+    vest3:
+      type: css
+      value: com.kw.literie.vest3:id/ivNext
+  ios:
+    main:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='下一章']
+    vest1:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='下一章']
+    vest2:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='下一章']
+    vest3:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='下一章']

@@ -1,0 +1,12 @@
+{
+  "page_name": "checkin_popup",
+  "app_name": "main",
+  "platform": "ios",
+  "timestamp": "20260324_142249",
+  "description": "签到弹窗页面",
+  "xml_file": "checkin_popup_20260324_142249.xml",
+  "window_size": {
+    "width": 414,
+    "height": 736
+  }
+}

@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"验证首页加载、Tab切换、Banner点击以及推荐书籍点击后的行为","90265","主包首页-核心冒烟流程","case","Fri Mar 20 13:43:59 CST 2026","passed","Fri Mar 20 13:45:30 CST 2026","","test_home","",""

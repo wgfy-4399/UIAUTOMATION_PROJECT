@@ -1,0 +1,48 @@
+# 数据库环境配置（测试/预发/生产）
+env:
+  default: "test"  # 默认使用测试环境
+  test:  # 测试环境
+    # 主库（用户/书籍基础数据）
+    main_db:
+      host: "fanqie-elgz.c8zpeadbhduu.us-west-2.rds.amazonaws.com"
+      port: 3306
+      user: "guanjiakun"
+      password: "Ge6VZ7SrUGe9GnAw"
+      database: "fanqie_test"
+      charset: "utf8mb4"
+      timeout: 30  # 连接超时时间（秒）
+    # 订单库（充值/消费记录）
+    order_db:
+      host: "192.168.1.101"
+      port: 3306
+      user: "test_order"
+      password: "Order@123456"
+      database: "novel_order_test"
+      charset: "utf8mb4"
+      timeout: 30
+  pre:  # 预发环境
+    main_db:
+      host: "172.16.1.100"
+      port: 3306
+      user: "pre_user"
+      password: "Pre@123456"
+      database: "novel_pre"
+      charset: "utf8mb4"
+      timeout: 30
+    order_db:
+      host: "172.16.1.101"
+      port: 3306
+      user: "pre_order"
+      password: "Pre@123456"
+      database: "novel_order_pre"
+      charset: "utf8mb4"
+      timeout: 30
+  prod:  # 生产环境（谨慎使用）
+    main_db:
+      host: "10.0.1.100"
+      port: 3306
+      user: "prod_readonly"  # 仅只读账号
+      password: "Prod@123456"
+      database: "novel_prod"
+      charset: "utf8mb4"
+      timeout: 30

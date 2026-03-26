@@ -1,0 +1,234 @@
+home_tab:
+  android:
+    main:
+      type: css
+      value: com.wangwen.main:id/tab_home
+    vest1:
+      type: css
+      value: com.kw.literie:id/tab_home
+    vest2:
+      type: css
+      value: com.kw.literie.vest2:id/tab_home
+    vest3:
+      type: css
+      value: com.kw.literie.vest3:id/tab_home
+  ios:
+    main:
+      type: accessibility_id
+      value: Discover
+    vest1:
+      type: accessibility_id
+      value: //XCUIElementTypeButton[@name='Discover']
+    vest2:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='Discover']
+    vest3:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='Discover']
+shelf_tab:
+  android:
+    main:
+      type: css
+      value: com.wangwen.main:id/tab_shelf
+    vest1:
+      type: css
+      value: com.kw.literie:id/tab_shelf
+    vest2:
+      type: css
+      value: com.kw.literie.vest2:id/tab_shelf
+    vest3:
+      type: css
+      value: com.kw.literie.vest3:id/tab_shelf
+  ios:
+    main:
+      type: accessibility_id
+      value: Library
+    vest1:
+      type: accessibility_id
+      value: Library
+    vest2:
+      type: accessibility_id
+      value: Library
+    vest3:
+      type: accessibility_id
+      value: Library
+task_tab:
+  android:
+    main:
+      type: css
+      value: com.wangwen.main:id/tab_task
+    vest1:
+      type: css
+      value: com.kw.literie:id/tab_task
+    vest2:
+      type: css
+      value: com.kw.literie.vest2:id/tab_task
+    vest3:
+      type: css
+      value: com.kw.literie.vest3:id/tab_task
+  ios:
+    main:
+      type: accessibility_id
+      value: Rewards
+    vest1:
+      type: accessibility_id
+      value: Rewards
+    vest2:
+      type: accessibility_id
+      value: Rewards
+    vest3:
+      type: accessibility_id
+      value: Rewards
+mine_tab:
+  android:
+    main:
+      type: css
+      value: com.wangwen.main:id/tab_mine
+    vest1:
+      type: css
+      value: com.kw.literie:id/tab_mine
+    vest2:
+      type: css
+      value: com.kw.literie.vest2:id/tab_mine
+    vest3:
+      type: css
+      value: com.kw.literie.vest3:id/tab_mine
+  ios:
+    main:
+      type: xpath
+      value: '//XCUIElementTypeTabBar//XCUIElementTypeButton[@name="Profile"]'
+    vest1:
+      type: xpath
+      value: '//XCUIElementTypeTabBar//XCUIElementTypeButton[@name="Profile"]'
+    vest2:
+      type: xpath
+      value: '//XCUIElementTypeTabBar//XCUIElementTypeButton[@name="Profile"]'
+    vest3:
+      type: xpath
+      value: '//XCUIElementTypeTabBar//XCUIElementTypeButton[@name="Profile"]'
+genre_tab:
+  ios:
+    main:
+      type: accessibility_id
+      value: Genre
+    vest1:
+      type: accessibility_id
+      value: Genre
+    vest2:
+      type: accessibility_id
+      value: Genre
+    vest3:
+      type: accessibility_id
+      value: Genre
+
+banner_list:
+  android:
+    main:
+      type: css
+      value: com.wangwen.main:id/rv_banner
+    vest1:
+      type: css
+      value: com.kw.literie:id/rv_banner
+    vest2:
+      type: css
+      value: com.kw.literie.vest2:id/rv_banner
+    vest3:
+      type: css
+      value: com.kw.literie.vest3:id/rv_banner
+  ios:
+    main:
+      type: xpath
+      value: //XCUIElementTypeCollectionView
+    vest1:
+      type: xpath
+      value: //XCUIElementTypeCollectionView
+    vest2:
+      type: xpath
+      value: //XCUIElementTypeCollectionView
+    vest3:
+      type: xpath
+      value: //XCUIElementTypeCollectionView
+recommend_book_list:
+  android:
+    main:
+      type: css
+      value: com.wangwen.main:id/rv_recommend_books
+    vest1:
+      type: css
+      value: com.kw.literie:id/rv_recommend_books
+    vest2:
+      type: css
+      value: com.kw.literie.vest2:id/rv_recommend_books
+    vest3:
+      type: css
+      value: com.kw.literie.vest3:id/rv_recommend_books
+  ios:
+    main:
+      type: xpath
+      value: //XCUIElementTypeOther[@name="3*N 旧版本页卡"]/following-sibling::XCUIElementTypeCell[1]
+    vest1:
+      type: xpath
+      value: //XCUIElementTypeStaticText[@name="3*N 榜版本页卡"]/following-sibling::XCUIElementTypeCell[1]
+    vest2:
+      type: xpath
+      value: //XCUIElementTypeStaticText[@name="3*N榜旧版本页卡"]/following-sibling::XCUIElementTypeCell[1]
+    vest3:
+      type: xpath
+      value: //XCUIElementTypeStaticText[@name="3*N榜旧版本页卡"]/following-sibling::XCUIElementTypeCell[1]
+search_entry:
+  android:
+    main:
+      type: css
+      value: com.wangwen.main:id/ll_search
+    vest1:
+      type: css
+      value: com.kw.literie:id/ll_search
+    vest2:
+      type: css
+      value: com.kw.literie.vest2:id/ll_search
+    vest3:
+      type: css
+      value: com.kw.literie.vest3:id/ll_search
+  ios:
+    main:
+      type: xpath
+      value: '**/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeButton'
+    vest1:
+      type: xpath
+      value: '**/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeButton'
+    vest2:
+      type: xpath
+      value: '**/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeButton'
+    vest3:
+      type: xpath
+      value: '**/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeButton'
+
+top_first_tab:
+  ios:
+    main:
+      type: xpath
+      value: '//XCUIElementTypeOther[contains(@y, "64")]//XCUIElementTypeButton[2]'
+    vest1:
+      type: xpath
+      value: '//XCUIElementTypeOther[contains(@y, "64")]//XCUIElementTypeButton[2]'
+    vest2:
+      type: xpath
+      value: '//XCUIElementTypeOther[contains(@y, "64")]//XCUIElementTypeButton[2]'
+    vest3:
+      type: xpath
+      value: '//XCUIElementTypeOther[contains(@y, "64")]//XCUIElementTypeButton[2]'
+
+task_center_bubble:
+  ios:
+    main:
+      type: ios_class_chain
+      value: '**/XCUIElementTypeStaticText[`name == "Search"`]/../following-sibling::XCUIElementTypeButton[1]'
+    vest1:
+      type: ios_class_chain
+      value: '**/XCUIElementTypeStaticText[`name == "Search"`]/../following-sibling::XCUIElementTypeButton[1]'
+    vest2:
+      type: ios_class_chain
+      value: '**/XCUIElementTypeStaticText[`name == "Search"`]/../following-sibling::XCUIElementTypeButton[1]'
+    vest3:
+      type: ios_class_chain
+      value: '**/XCUIElementTypeStaticText[`name == "Search"`]/../following-sibling::XCUIElementTypeButton[1]'

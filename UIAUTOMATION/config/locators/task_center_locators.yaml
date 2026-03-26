@@ -1,0 +1,161 @@
+# 底部导航 - 任务中心 Tab
+task_center_tab:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Rewards"
+
+# 签到弹窗
+checkin_popup_close_button:
+  ios:
+    main:
+      type: accessibility_id
+      value: "nl boot login close"
+
+checkin_popup_checkin_button:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Check in"
+
+checkin_popup_title_text:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Check in now to earn 20 Vouchers!"
+
+daily_check_in_button:
+  android:
+    main:
+      type: css
+      value: com.wangwen.main:id/btn_daily_check_in
+    vest1:
+      type: css
+      value: com.kw.literie:id/btn_daily_check_in
+    vest2:
+      type: css
+      value: com.kw.literie.vest2:id/btn_daily_check_in
+    vest3:
+      type: css
+      value: com.kw.literie.vest3:id/btn_daily_check_in
+  ios:
+    main:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='签到']
+    vest1:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='签到']
+    vest2:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='签到']
+    vest3:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='签到']
+task_list_container:
+  android:
+    main:
+      type: css
+      value: com.wangwen.main:id/rv_task_list
+    vest1:
+      type: css
+      value: com.kw.literie:id/rv_task_list
+    vest2:
+      type: css
+      value: com.kw.literie.vest2:id/rv_task_list
+    vest3:
+      type: css
+      value: com.kw.literie.vest3:id/rv_task_list
+  ios:
+    main:
+      type: xpath
+      value: //XCUIElementTypeTable
+    vest1:
+      type: xpath
+      value: //XCUIElementTypeTable
+    vest2:
+      type: xpath
+      value: //XCUIElementTypeTable
+    vest3:
+      type: xpath
+      value: //XCUIElementTypeTable
+reward_button:
+  android:
+    main:
+      type: css
+      value: com.wangwen.main:id/btn_receive_reward
+    vest1:
+      type: css
+      value: com.kw.literie:id/btn_receive_reward
+    vest2:
+      type: css
+      value: com.kw.literie.vest2:id/btn_receive_reward
+    vest3:
+      type: css
+      value: com.kw.literie.vest3:id/btn_receive_reward
+  ios:
+    main:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='领取']
+    vest1:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='领取']
+    vest2:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='领取']
+    vest3:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='领取']
+gold_balance_text:
+  android:
+    main:
+      type: css
+      value: com.wangwen.main:id/tv_gold_balance
+    vest1:
+      type: css
+      value: com.kw.literie:id/tv_gold_balance
+    vest2:
+      type: css
+      value: com.kw.literie.vest2:id/tv_gold_balance
+    vest3:
+      type: css
+      value: com.kw.literie.vest3:id/tv_gold_balance
+  ios:
+    main:
+      type: xpath
+      value: //XCUIElementTypeStaticText[@name='金币']
+    vest1:
+      type: xpath
+      value: //XCUIElementTypeStaticText[@name='金币']
+    vest2:
+      type: xpath
+      value: //XCUIElementTypeStaticText[@name='金币']
+    vest3:
+      type: xpath
+      value: //XCUIElementTypeStaticText[@name='金币']
+task_rule_entry:
+  android:
+    main:
+      type: css
+      value: com.wangwen.main:id/tv_task_rule
+    vest1:
+      type: css
+      value: com.kw.literie:id/tv_task_rule
+    vest2:
+      type: css
+      value: com.kw.literie.vest2:id/tv_task_rule
+    vest3:
+      type: css
+      value: com.kw.literie.vest3:id/tv_task_rule
+  ios:
+    main:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='规则']
+    vest1:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='规则']
+    vest2:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='规则']
+    vest3:
+      type: xpath
+      value: //XCUIElementTypeButton[@name='规则']

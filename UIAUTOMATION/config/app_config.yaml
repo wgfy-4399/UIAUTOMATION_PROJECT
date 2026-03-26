@@ -1,0 +1,32 @@
+# app_config.yaml - 纯应用配置（无设备/driver配置）
+# 主包配置
+main:
+  android:
+    appPackage: "com.wangwen.main"
+    appActivity: "com.wangwen.main.MainActivity"
+    appPath: "/apk/main_android_v1.0.0.apk"
+    # 新增：蒲公英安卓包配置
+    pgyer_shortlink: "https://www.pgyer.com/main_android"  # 蒲公英短链接（用则配）
+    pgyer_save_dir: "/apk/download"  # 下载保存目录（可选）
+  ios:
+    bundleId: "com.qvon.novellair"
+    # appPath: "/ipa/main_ios_v1.0.0.ipa"
+    # 新增：蒲公英iOS包配置
+    pgyer_shortlink: "https://www.pgyer.com/main_ios"
+    pgyer_save_dir: "/ipa/download"
+
+# 马甲包1配置
+vest1:
+  android:
+    appPackage: "com.kw.literie"
+    appActivity: "com.kw.literie.ui.activity.FqSecPackgPortActivity"
+    appPath: "/apk/vest1_android_v1.0.0.apk"
+    # 新增：蒲公英安卓包配置
+    pgyer_shortlink: "https://www.pgyer.com/vest1_android"
+    pgyer_save_dir: "/apk/download"
+  ios:
+    bundleId: "com.wangwen.vest1"
+    appPath: "/ipa/vest1_ios_v1.0.0.ipa"
+    # 新增：蒲公英iOS包配置
+    pgyer_shortlink: "https://www.pgyer.com/vest1_ios"
+    pgyer_save_dir: "/ipa/download"

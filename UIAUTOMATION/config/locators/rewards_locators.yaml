@@ -1,0 +1,138 @@
+# Rewards 页面定位符配置
+# 任务中心/个人中心页面
+
+# 底部导航 - Rewards Tab
+rewards_tab:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Rewards"
+
+# 导航栏
+rewards_title:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Task Center"
+
+# 每日任务区域
+daily_tasks_header:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Daily tasks"
+
+# 使用 XPath 定位总奖励（因为金额会变化）
+total_rewards_text:
+  ios:
+    main:
+      type: xpath
+      value: "//XCUIElementTypeStaticText[contains(@label, 'Total Rewards:')]"
+
+countdown_timer:
+  ios:
+    main:
+      type: xpath
+      value: "//XCUIElementTypeStaticText[contains(@label, ':') and contains(@label, ':')]"
+
+# 任务卡片 - Play for 30 seconds
+task_play_30_title:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Play for 30 seconds(0/6)"
+
+task_play_30_reward:
+  ios:
+    main:
+      type: accessibility_id
+      value: "48"
+
+task_play_30_go_button:
+  ios:
+    main:
+      type: accessibility_id
+      value: "GO"
+
+# 任务卡片 - Log in with Facebook
+task_facebook_title:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Log in with Facebook1"
+
+task_facebook_desc:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Log in with Facebook to get 30 vouchers"
+
+task_facebook_reward:
+  ios:
+    main:
+      type: accessibility_id
+      value: "30"
+
+task_facebook_go_button:
+  ios:
+    main:
+      type: accessibility_id
+      value: "GO"
+
+# 任务卡片 - Top up
+task_topup_title:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Top up"
+
+task_topup_desc:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Get 300 coins by topping up"
+
+# 签到任务
+checkin_task_title:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Check-in Task"
+
+checkin_task_desc:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Continuous check-ins, endless rewards"
+
+checkin_go_button:
+  ios:
+    main:
+      type: accessibility_id
+      value: "GO"
+
+# 签到弹窗
+checkin_popup_close_button:
+  ios:
+    main:
+      type: accessibility_id
+      value: "nl boot login close"
+
+checkin_popup_checkin_button:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Check in"
+
+checkin_popup_title_text:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Check in now to earn 20 Vouchers!"
+
+# 通用 GO 按钮（用于动态定位任务）
+go_button:
+  ios:
+    main:
+      type: accessibility_id
+      value: "GO"

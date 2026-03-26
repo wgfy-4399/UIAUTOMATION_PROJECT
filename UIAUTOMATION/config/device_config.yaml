@@ -1,0 +1,26 @@
+devices:
+  # Android设备
+  - index: 0
+    platform: "android"
+    udid: "DUM0219703006996"  # 模拟器/真机UDID
+    appium_port: 4723
+    platformVersion: "10"
+  # iOS设备
+  - index: 1
+    platform: "ios"
+    deviceName: "Novellair"
+    udid: "43320ae5864ab870fc7489a147f528d827da68d6"  # iOS设备UDID
+    appium_port: 4723  # 使用与 Android 相同的端口
+    platformVersion: "15.6.1"
+    xcodeOrgId: "92787V7C7H"  # iOS开发者团队ID（WebDriverAgent 项目配置）
+    xcodeSigningId: "Apple Development"
+
+# 全局Driver配置
+driver_config:
+  noReset: True  # 不重置应用状态（保留登录信息）
+  fullReset: False  # 不卸载应用
+  unicodeKeyboard: False  # 支持中文输入
+  resetKeyboard: True  # 结束后重置键盘
+  newCommandTimeout: 300  # 命令超时时间（5分钟）
+  autoGrantPermissions: True # 自动授权应用权限
+  ignoreUnimportantViews : True  # 提升元素定位速度，兼容华为UI

@@ -1,0 +1,54 @@
+book_list:
+  android:
+    main:
+      type: css
+      value: com.wangwen.main:id/rv_bookshelf
+    vest1:
+      type: css
+      value: com.kw.literie:id/rv_bookshelf
+    vest2:
+      type: css
+      value: com.kw.literie.vest2:id/rv_bookshelf
+    vest3:
+      type: css
+      value: com.kw.literie.vest3:id/rv_bookshelf
+  ios:
+    main:
+      type: xpath
+      value: //XCUIElementTypeCollectionView
+    vest1:
+      type: xpath
+      value: //XCUIElementTypeCollectionView
+    vest2:
+      type: xpath
+      value: //XCUIElementTypeCollectionView
+    vest3:
+      type: xpath
+      value: //XCUIElementTypeCollectionView
+book_cover:
+  android:
+    main:
+      type: css
+      value: com.wangwen.main:id/iv_book_cover
+    vest1:
+      type: css
+      value: com.kw.literie:id/iv_book_cover
+    vest2:
+      type: css
+      value: com.kw.literie.vest2:id/iv_book_cover
+    vest3:
+      type: css
+      value: com.kw.literie.vest3:id/iv_book_cover
+  ios:
+    main:
+      type: xpath
+      value: //XCUIElementTypeImage
+    vest1:
+      type: xpath
+      value: //XCUIElementTypeImage
+    vest2:
+      type: xpath
+      value: //XCUIElementTypeImage
+    vest3:
+      type: xpath
+      value: //XCUIElementTypeImage

@@ -1,0 +1,36 @@
+2026-03-20 13:43:59 - INFO - report_utils:37 - [0;32mAllure用例信息已设置 - 标题：主包首页-核心冒烟流程[0m
+2026-03-20 13:43:59 - INFO - report_utils:210 - [0;32m✅ 严重级别已设置: critical[0m
+2026-03-20 13:43:59 - INFO - report_utils:229 - [0;32m✅ 标签已添加: ['smoke', 'home', 'main_app', 'main'][0m
+2026-03-20 13:43:59 - INFO - report_utils:136 - [0;32m📝 Allure步骤: 点击首页顶部第一个 Tab[0m
+2026-03-20 13:44:02 - INFO - home_page:142 - [0;32m已点击顶部第一个tab[0m
+2026-03-20 13:44:06 - INFO - screenshot_utils:84 - [0;32m✅ 全屏截图成功！场景：home_top_first_tab_clicked，保存路径：/Users/zhuanzmima0000/UIautomation_project/UIAUTOMATION/report/screenshot/20260320_134405_767_home_top_first_tab_clicked.png，文件大小：1804480 字节[0m
+2026-03-20 13:44:06 - INFO - report_utils:67 - [0;32m✅ 截图已附加到Allure报告: /Users/zhuanzmima0000/UIautomation_project/UIAUTOMATION/report/screenshot/20260320_134405_767_home_top_first_tab_clicked.png[0m
+2026-03-20 13:44:06 - INFO - report_utils:136 - [0;32m📝 Allure步骤: 从首页依次切换到底部【书架】【任务】【分类】【我的】Tab，再返回首页（链式调用）[0m
+2026-03-20 13:44:09 - INFO - home_page:70 - [0;32m已点击底部【书架】Tab[0m
+2026-03-20 13:44:12 - INFO - screenshot_utils:84 - [0;32m✅ 全屏截图成功！场景：shelf_from_home，保存路径：/Users/zhuanzmima0000/UIautomation_project/UIAUTOMATION/report/screenshot/20260320_134412_136_shelf_from_home.png，文件大小：675402 字节[0m
+2026-03-20 13:44:12 - INFO - report_utils:67 - [0;32m✅ 截图已附加到Allure报告: /Users/zhuanzmima0000/UIautomation_project/UIAUTOMATION/report/screenshot/20260320_134412_136_shelf_from_home.png[0m
+2026-03-20 13:44:14 - INFO - base_page:462 - [0;32m执行返回操作[0m
+2026-03-20 13:44:20 - INFO - home_page:84 - [0;32m已点击底部【任务】Tab[0m
+2026-03-20 13:44:24 - INFO - base_page:462 - [0;32m执行返回操作[0m
+2026-03-20 13:44:32 - INFO - home_page:109 - [0;32m已点击底部【分类】Tab[0m
+2026-03-20 13:44:36 - INFO - home_page:98 - [0;32m已点击底部【我的】Tab[0m
+2026-03-20 13:44:40 - INFO - home_page:59 - [0;32m已点击底部【首页】Tab[0m
+2026-03-20 13:44:43 - INFO - report_utils:136 - [0;32m📝 Allure步骤: 点击首页任务中心气泡（若存在）[0m
+2026-03-20 13:45:14 - ERROR - home_page:244 - [0;31m点击任务中心气泡失败：元素不可点击：Message: 元素('xpath', '(//XCUIElementTypeStaticText[@name="Search"]/../..)/following-sibling::XCUIElementTypeButton[1]')等待可点击超时
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at XCUITestDriver.doNativeFind (/Users/zhuanzmima0000/.appium/node_modules/appium-xcuitest-driver/build/lib/commands/find.js:100:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async XCUITestDriver.findNativeElementOrElements (/Users/zhuanzmima0000/.appium/node_modules/appium-xcuitest-driver/build/lib/commands/find.js:65:11)
+    at async XCUITestDriver.findElOrEls (/Users/zhuanzmima0000/.appium/node_modules/appium-xcuitest-driver/build/lib/commands/find.js:22:11)
+    at async XCUITestDriver.findElOrElsWithProcessing (/Users/zhuanzmima0000/.nvm/versions/node/v24.13.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/basedriver/commands/find.js:12:16)
+    at async XCUITestDriver.findElement (/Users/zhuanzmima0000/.nvm/versions/node/v24.13.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/basedriver/commands/find.js:27:16)[0m
+2026-03-20 13:45:14 - INFO - report_utils:136 - [0;32m📝 Allure步骤: 点击首页推荐书籍进入阅读器[0m
+2026-03-20 13:45:14 - INFO - base_page:187 - [0;32m查找元素：定位方式=xpath, 定位值=//XCUIElementTypeOther[@name="3*N榜单页卡-新-测试-1"]/following-sibling::XCUIElementTypeCell[1][0m
+2026-03-20 13:45:14 - INFO - base_page:162 - [0;32m开始定位元素：('xpath', '//XCUIElementTypeOther[@name="3*N榜单页卡-新-测试-1"]/following-sibling::XCUIElementTypeCell[1]')，第 1/3 次尝试[0m
+2026-03-20 13:45:21 - INFO - home_page:205 - [0;32m已点击 iOS 3*N 榜单中索引为 0 的元素（可见元素总数=14）[0m
+2026-03-20 13:45:25 - INFO - screenshot_utils:84 - [0;32m✅ 全屏截图成功！场景：reader_from_home_recommend，保存路径：/Users/zhuanzmima0000/UIautomation_project/UIAUTOMATION/report/screenshot/20260320_134524_890_reader_from_home_recommend.png，文件大小：862754 字节[0m
+2026-03-20 13:45:25 - INFO - report_utils:67 - [0;32m✅ 截图已附加到Allure报告: /Users/zhuanzmima0000/UIautomation_project/UIAUTOMATION/report/screenshot/20260320_134524_890_reader_from_home_recommend.png[0m
+2026-03-20 13:45:25 - INFO - report_utils:136 - [0;32m📝 Allure步骤: 从阅读器返回书架与首页[0m
+2026-03-20 13:45:25 - INFO - base_page:462 - [0;32m执行返回操作[0m
+2026-03-20 13:45:28 - INFO - base_page:462 - [0;32m执行返回操作[0m

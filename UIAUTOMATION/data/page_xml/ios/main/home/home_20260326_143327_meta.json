@@ -1,0 +1,12 @@
+{
+  "page_name": "home",
+  "app_name": "main",
+  "platform": "ios",
+  "timestamp": "20260326_143327",
+  "description": "首页",
+  "xml_file": "home_20260326_143327.xml",
+  "window_size": {
+    "width": 414,
+    "height": 736
+  }
+}
