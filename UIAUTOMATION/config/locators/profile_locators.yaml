@@ -1,0 +1,268 @@
+# Profile 页面定位符配置
+# 个人中心页面（My Profile / Mine）
+
+# 导航栏
+navigation_bar:
+  ios:
+    main:
+      type: accessibility_id
+      value: "NLMineView"
+
+# 头像按钮
+avatar_button:
+  ios:
+    main:
+      type: xpath
+      value: "//XCUIElementTypeButton[@x='33' and @y='91']"
+
+# 登录按钮/文本
+login_button:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Log in"
+
+# 首次登录奖励提示
+first_login_reward:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Reward for first login"
+
+# 用户ID
+user_id:
+  ios:
+    main:
+      type: accessibility_id
+      value: "ID:2235975"
+
+# 金币数量
+coins_count:
+  ios:
+    main:
+      type: xpath
+      value: "(//XCUIElementTypeStaticText[@name='0'])[1]"
+
+# 金币标签
+coins_label:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Coins"
+
+# 金币区域（包含数量和标签）
+coins_section:
+  ios:
+    main:
+      type: xpath
+      value: "//XCUIElementTypeStaticText[@name='Coins']/parent::XCUIElementTypeOther"
+
+# 优惠券数量
+vouchers_count:
+  ios:
+    main:
+      type: xpath
+      value: "(//XCUIElementTypeStaticText[@name='0'])[2]"
+
+# 优惠券标签
+vouchers_label:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Vouchers"
+
+# 优惠券区域
+vouchers_section:
+  ios:
+    main:
+      type: xpath
+      value: "//XCUIElementTypeStaticText[@name='Vouchers']/parent::XCUIElementTypeOther"
+
+# 购买按钮
+purchase_button:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Purchase"
+
+# Coin Package 标题
+coin_package_title:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Coin Package"
+
+# 订阅按钮
+subscribe_button:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Subscribe"
+
+# 订阅折扣信息
+subscribe_discount:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Discounts up to 89%"
+
+# Rewards 入口
+rewards_entry:
+  ios:
+    main:
+      type: xpath
+      value: "//XCUIElementTypeStaticText[@name='Rewards']/parent::XCUIElementTypeOther"
+
+# Rewards 标题
+rewards_title:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Rewards"
+
+# Inbox 入口
+inbox_entry:
+  ios:
+    main:
+      type: xpath
+      value: "//XCUIElementTypeStaticText[@name='Inbox']/parent::XCUIElementTypeOther"
+
+# Inbox 标题
+inbox_title:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Inbox"
+
+# 成为作者入口
+become_writer_entry:
+  ios:
+    main:
+      type: xpath
+      value: "//XCUIElementTypeStaticText[@name='Become a Letterlux Writer']/parent::XCUIElementTypeOther"
+
+# 成为作者标题
+become_writer_title:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Become a Letterlux Writer"
+
+# 设置入口
+settings_entry:
+  ios:
+    main:
+      type: xpath
+      value: "//XCUIElementTypeStaticText[@name='Settings']/parent::XCUIElementTypeOther"
+
+# 设置标题
+settings_title:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Settings"
+
+# 反馈入口
+feedback_entry:
+  ios:
+    main:
+      type: xpath
+      value: "//XCUIElementTypeStaticText[@name='Feedback']/parent::XCUIElementTypeOther"
+
+# 反馈标题
+feedback_title:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Feedback"
+
+# 关于入口
+about_entry:
+  ios:
+    main:
+      type: xpath
+      value: "//XCUIElementTypeStaticText[@name='About']/parent::XCUIElementTypeOther"
+
+# 关于标题
+about_title:
+  ios:
+    main:
+      type: accessibility_id
+      value: "About"
+
+# 最近阅读卡片区域
+recent_read_card:
+  ios:
+    main:
+      type: xpath
+      value: "//XCUIElementTypeButton[@name='nl close small']/parent::XCUIElementTypeOther"
+
+# 最近阅读关闭按钮
+recent_read_close_button:
+  ios:
+    main:
+      type: accessibility_id
+      value: "nl close small"
+
+# 最近阅读书籍标题
+recent_read_book_title:
+  ios:
+    main:
+      type: xpath
+      value: "//XCUIElementTypeStaticText[@name='When He Finally Remembered']"
+
+# 最近阅读章节
+recent_read_chapter:
+  ios:
+    main:
+      type: xpath
+      value: "//XCUIElementTypeStaticText[contains(@name, 'Chapter')]"
+
+# 继续阅读按钮
+continue_read_button:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Read"
+
+# 底部 Tab Bar
+tab_bar:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Tab Bar"
+
+# Profile Tab
+profile_tab:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Profile"
+
+# Library Tab
+library_tab:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Library"
+
+# Discover Tab
+discover_tab:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Discover"
+
+# Rewards Tab
+rewards_tab:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Rewards"
+
+# Genre Tab
+genre_tab:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Genre"

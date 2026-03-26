@@ -102,10 +102,11 @@ def quick_capture(platform: str, app_name: str, page_name: str, description: str
     device_index = get_device_index_by_platform(platform)
     driver = get_driver(platform=platform, app_name=app_name, device_index=device_index)
     print("✅ 应用启动成功！")
-    print(f"⏳ 请在 5 秒内手动操作到 '{page_name}' 页面...")
+    print(f"⏳ 请在 15 秒内手动操作到 '{page_name}' 页面...")
+    print(f"📌 Profile 页面入口：点击底部导航栏最右侧的【我的/Me】图标")
 
     import time
-    time.sleep(5)
+    time.sleep(15)
 
     print(f"📸 正在采集 '{page_name}' 页面的 XML...")
     xml_content = XMLCaptureUtils.capture_page_source(
