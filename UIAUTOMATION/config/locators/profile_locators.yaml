@@ -8,12 +8,12 @@ navigation_bar:
       type: accessibility_id
       value: "NLMineView"
 
-# 头像按钮
+# 头像按钮（改进：使用相对定位，基于用户信息区域）
 avatar_button:
   ios:
     main:
       type: xpath
-      value: "//XCUIElementTypeButton[@x='33' and @y='91']"
+      value: "//XCUIElementTypeOther[@name='NLMineView']//XCUIElementTypeButton[1]"
 
 # 登录按钮/文本
 login_button:
@@ -29,19 +29,19 @@ first_login_reward:
       type: accessibility_id
       value: "Reward for first login"
 
-# 用户ID
+# 用户ID（改进：使用 contains 匹配，不硬编码具体ID）
 user_id:
   ios:
     main:
-      type: accessibility_id
-      value: "ID:2235975"
+      type: xpath
+      value: "//XCUIElementTypeStaticText[contains(@name, 'ID:')]"
 
-# 金币数量
+# 金币数量（改进：基于 Coins 标签的相对定位）
 coins_count:
   ios:
     main:
       type: xpath
-      value: "(//XCUIElementTypeStaticText[@name='0'])[1]"
+      value: "//XCUIElementTypeStaticText[@name='Coins']/preceding-sibling::XCUIElementTypeStaticText[1]"
 
 # 金币标签
 coins_label:
@@ -57,12 +57,12 @@ coins_section:
       type: xpath
       value: "//XCUIElementTypeStaticText[@name='Coins']/parent::XCUIElementTypeOther"
 
-# 优惠券数量
+# 优惠券数量（改进：基于 Vouchers 标签的相对定位）
 vouchers_count:
   ios:
     main:
       type: xpath
-      value: "(//XCUIElementTypeStaticText[@name='0'])[2]"
+      value: "//XCUIElementTypeStaticText[@name='Vouchers']/preceding-sibling::XCUIElementTypeStaticText[1]"
 
 # 优惠券标签
 vouchers_label:
@@ -204,12 +204,12 @@ recent_read_close_button:
       type: accessibility_id
       value: "nl close small"
 
-# 最近阅读书籍标题
+# 最近阅读书籍标题（改进：基于最近阅读卡片的相对定位）
 recent_read_book_title:
   ios:
     main:
       type: xpath
-      value: "//XCUIElementTypeStaticText[@name='When He Finally Remembered']"
+      value: "//XCUIElementTypeButton[@name='nl close small']/parent::XCUIElementTypeOther//XCUIElementTypeStaticText[not(contains(@name, 'Chapter'))][1]"
 
 # 最近阅读章节
 recent_read_chapter:
