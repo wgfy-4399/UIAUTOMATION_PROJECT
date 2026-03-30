@@ -1,0 +1,84 @@
+# Chapter List 页面定位符配置
+# 章节列表弹窗/页面
+# 采集日期: 2026-03-30
+# 平台: iOS
+# 应用: main
+
+# ==================== 容器 ====================
+
+# 章节列表容器（UITableView）
+chapter_list_container:
+  ios:
+    main:
+      type: xpath
+      value: "//XCUIElementTypeTable[@visible='true']"
+
+# ==================== 导航/操作 ====================
+
+# 关闭章节列表按钮（点击列表外部区域关闭）
+close_button:
+  ios:
+    main:
+      type: xpath
+      value: "//XCUIElementTypeButton[@x='0' and @y='0' and @width='414']"
+
+# 章节排序按钮（正序/倒序切换）
+sort_button:
+  ios:
+    main:
+      type: accessibility_id
+      value: "nl chapter enum down"
+
+# ==================== 信息展示 ====================
+
+# 章节总数文本（如 "155 Chapters"）
+chapters_count_text:
+  ios:
+    main:
+      type: accessibility_id
+      value: "155 Chapters"
+
+# 当前阅读章节标题（第一个可见章节）
+current_chapter_text:
+  ios:
+    main:
+      type: xpath
+      value: "(//XCUIElementTypeTable[@visible='true']//XCUIElementTypeStaticText[contains(@name, 'CHAPTER') or contains(@name, 'Chapter')])[1]"
+
+# ==================== 列表项 ====================
+
+# 章节列表项（Cell）- 通用定位符
+chapter_item:
+  ios:
+    main:
+      type: xpath
+      value: "//XCUIElementTypeTable[@visible='true']//XCUIElementTypeStaticText[contains(@name, 'CHAPTER') or contains(@name, 'Chapter')]"
+
+# 通过章节号定位（如 CHAPTER 1）
+# 使用方法：在代码中动态构建 xpath
+# 例如: f"//XCUIElementTypeStaticText[@name='CHAPTER {index}']"
+
+# ==================== 特殊状态 ====================
+
+# 解锁章节标识（如果存在 voucher 标签）
+voucher_button:
+  ios:
+    main:
+      type: accessibility_id
+      value: "  5 voucher"
+
+# 订阅按钮（如果显示）
+subscribe_button:
+  ios:
+    main:
+      type: accessibility_id
+      value: "Subscribe"
+
+# ==================== 阅读器根视图 ====================
+
+# 阅读器根视图标识
+reader_root_view:
+  ios:
+    main:
+      type: accessibility_id
+      value: NLReadRootView
